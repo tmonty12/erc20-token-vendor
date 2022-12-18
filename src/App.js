@@ -18,7 +18,12 @@ function App() {
 
   // const provider = new providers.JsonRpcProvider('http://127.0.0.1:8545/', 1337)
   const metamaskConnector = new MetaMaskConnector({ chains: [hardhatLocal, goerli] })
-  const walletConnectConnector = new WalletConnectConnector({ chains: [hardhatLocal, goerli] })
+  const walletConnectConnector = new WalletConnectConnector({ 
+    chains: [hardhatLocal, goerli], 
+    options: {
+      qrcode: true,
+    }
+  })
   // const connector = new InjectedConnector({
   //   chains: [hardhatLocal]
   // })
@@ -26,7 +31,6 @@ function App() {
   const { provider } = configureChains(
     [hardhatLocal, goerli],
     [ alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_API_KEY }),
-      // walletConnectProvider({ projectId: '1498e7776a0001dcef16c3ec7c3fd54f' }),
       jsonRpcProvider({
         rpc: (chain) => {
           if (chain.id !== hardhatLocal.id) return null
@@ -40,12 +44,9 @@ function App() {
     provider,
     connectors : [
       metamaskConnector,
-      // modalConnectors({ appName: 'web3Modal', chains: [goerli]}),
-
+      walletConnectConnector
     ]
   })
-
-  // const ethereumClient = new EthereumClient(client, [goerli])
 
   return (
     
@@ -53,8 +54,6 @@ function App() {
       <WagmiConfig client={client} >
         <Stake metamaskConnector={metamaskConnector} walletConnectConnector={walletConnectConnector} hardhatChain={hardhatLocal} provider={provider} />
       </WagmiConfig>
-
-      {/* <Web3Modal projectId='1498e7776a0001dcef16c3ec7c3fd54f' ethereumClient={ethereumClient}/> */}
     </>
     
   );
