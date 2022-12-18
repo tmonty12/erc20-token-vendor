@@ -29,3 +29,9 @@ npx hardhat run ./scripts/deploy.js --network localhost
 ```
 
 The scripts should have deployed the MontyToken contract and Vendor contract. You then need to define the variables ```REACT_APP_LOCALHOST_TOKEN_ADDRESS``` and ```REACT_APP_LOCALHOST_VENDOR_ADDRESS``` with the addresses that have been outputted in the terminal.
+
+Finally, you just need to run the React frontend:
+
+```shell
+npm start ".env"
+```
