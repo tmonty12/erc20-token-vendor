@@ -17,7 +17,7 @@ function Purchase({ vendorBalance, tokensPerEth, chainId, vendorAddress, balance
         address: vendorAddress,
         abi: Vendor.abi,
         functionName: 'buyTokens',
-        overrides: { value: ethers.utils.parseEther((purchaseTokens / tokensPerEth).toString()), gasLimit: 41000 },
+        overrides: { value: ethers.utils.parseEther((purchaseTokens / tokensPerEth).toString()), gasLimit: 60000 },
         chainId: chainId
     })
     const purchaseWrite = useContractWrite(purchaseConfig.config)

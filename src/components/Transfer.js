@@ -20,7 +20,7 @@ function Transfer({ userBalance, balanceRead, vendorBalanceRead, chainId, tokenA
         abi: MontyToken.abi,
         functionName: 'transfer',
         args: [transferAddress, (transferValue * (10**18)).toString()],
-        overrides: { gasLimit: 36000 },
+        overrides: { gasLimit: 53000 },
         chainId: chainId
     })
     const transferWrite = useContractWrite(transferConfig.config)
