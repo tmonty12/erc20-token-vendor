@@ -1,5 +1,15 @@
 # Simple ERC-20 Token Vendor
 
+## Deployed Token Vendor
+
+Check out the deploys Token Vendor [here](https://main.d2zy2j2csg7hde.amplifyapp.com/).
+
+It can only be used on desktop web and requires using a Metamask wallet or WalletConnect compatible wallet.
+
+Check out the deployed Token contract [here](https://goerli.etherscan.io/address/0xD11Fe938D3C4B9eE189C5FE978B41c3002a31335).
+
+Check out the deployed Vendor contract [here](https://goerli.etherscan.io/address/0x4Fc5eAa3677A84443C1a8F29400a045276641551).
+
 ## Deploying Token Vendor Locally
 
 You first need to clone the repository to your local environment and install all of the packages:
