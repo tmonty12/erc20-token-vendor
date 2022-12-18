@@ -4,8 +4,6 @@ import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { EthereumClient, modalConnectors, walletConnectProvider } from '@web3modal/ethereum'
-import { Web3Modal } from '@web3modal/react'
 import Stake from './components/Stake.js'
 
 function App() {

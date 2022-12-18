@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@web3modal/ethereum": "^2.0.0-beta.4",
     "@web3modal/react": "^2.0.0-beta.4",
+    "dotenv": "^16.0.3",
     "env-file-reader": "^1.0.5",
     "ethers": "^5.7.2",
     "react": "^18.2.0",

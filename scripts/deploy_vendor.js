@@ -6,19 +6,16 @@
 // global scope, and execute the script.
 const hre = require("hardhat");
 const ethers = require("ethers")
-const parse = require("env-file-reader").parse
+require('.dotenv').config()
 
 const network = hre.network.name
-
-
-
 
 async function main() {
   let tokenAddress
   if (network === 'localhost') {
-    tokenAddress = parse('.env').REACT_APP_LOCALHOST_TOKEN_ADDRESS
+    tokenAddress = process.env.REACT_APP_LOCALHOST_TOKEN_ADDRESS
   } else if (network === 'goerli') {
-    tokenAddress = parse('.env').REACT_APP_GOERLI_TOKEN_ADDRESS
+    tokenAddress = process.env.REACT_APP_GOERLI_TOKEN_ADDRESS
   } else {
     console.log(`${network} is not valid network`)
     return
