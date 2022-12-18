@@ -1,6 +1,12 @@
 # Simple ERC-20 Token Vendor
 
-## To deploy and test out Token Vendor locally
+## Deploying Token Vendor Locally
+
+You first need to clone the repository to your local environment and install all of the packages:
+
+```shell
+npm install
+```
 
 ```shell
 npx hardhat help
